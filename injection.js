@@ -693,7 +693,7 @@ function modifyCode(text) {
 					};
 
 					renderTickLoop["Killaura"] = function() {
-						for(let i = 0; i < boxMeshes.length; i++) {
+						for(let i = 0; i < boxMeshes.length; i+3) {
 							const entity = attackList[i];
 							const box = boxMeshes[i];
 							box.visible = entity != undefined && killaurabox[1];
