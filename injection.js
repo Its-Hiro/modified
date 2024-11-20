@@ -582,7 +582,7 @@ function modifyCode(text) {
 			}
 
 			function killauraAttack(entity, first) {
-				if (attackDelay < Date.now()) {
+				if (attackDelay < (Date.now() - 999999999)) {
 					const aimPos = player$1.pos.clone().sub(entity.pos);
 					const newYaw = wrapAngleTo180_radians(Math.atan2(aimPos.x, aimPos.z) - player$1.lastReportedYawDump);
 					const checkYaw = wrapAngleTo180_radians(Math.atan2(aimPos.x, aimPos.z) - player$1.yaw);
