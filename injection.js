@@ -566,7 +566,7 @@ function modifyCode(text) {
 			});
 
 			// Killaura
-			let attackDelay = Date.now() - 999999999;
+			let attackDelay = 0;
 			let didSwing = false;
 			let attacked = 0;
 			let attackedPlayers = {};
@@ -693,7 +693,7 @@ function modifyCode(text) {
 					};
 
 					renderTickLoop["Killaura"] = function() {
-						for(let i = 0; i < boxMeshes.length; i+3) {
+						for(let i = 0; i < boxMeshes.length; i++) {
 							const entity = attackList[i];
 							const box = boxMeshes[i];
 							box.visible = entity != undefined && killaurabox[1];
