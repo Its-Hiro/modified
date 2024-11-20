@@ -566,7 +566,7 @@ function modifyCode(text) {
 			});
 
 			// Killaura
-			let attackDelay = Date.now() - 99999999;
+			let attackDelay = Date.now() - 999999999;
 			let didSwing = false;
 			let attacked = 0;
 			let attackedPlayers = {};
