@@ -588,7 +588,7 @@ function modifyCode(text) {
 					const checkYaw = wrapAngleTo180_radians(Math.atan2(aimPos.x, aimPos.z) - player$1.yaw);
 					if (first) sendYaw = Math.abs(checkYaw) > degToRad(30) && Math.abs(checkYaw) < degToRad(killauraangle[1]) ? player$1.lastReportedYawDump + newYaw : false;
 					if (Math.abs(newYaw) < degToRad(30)) {
-						if ((attackedPlayers[entity.id] || 0) < Date.now()) attackedPlayers[entity.id] = Date.now() + 100;
+						if ((attackedPlayers[entity.id] || 0) < Date.now()) attackedPlayers[entity.id] = Date.now() + 999;
 						if (!didSwing) {
 							hud3D.swingArm();
 							ClientSocket.sendPacket(new SPacketClick({}));
