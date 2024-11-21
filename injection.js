@@ -622,8 +622,7 @@ function modifyCode(text) {
 							})
 						}));
 						player$1.attackDump(entity);
-      						player$1.attackDump(entity);
-	    					player$1.attackDump(entity);
+
 					}
 				}
 			}
