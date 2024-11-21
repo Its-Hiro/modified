@@ -591,8 +591,6 @@ function modifyCode(text) {
 						if ((attackedPlayers[entity.id] || 0) < Date.now()) attackedPlayers[entity.id] = Date.now() + 50;
 						if (!didSwing) {
 							hud3D.swingArm();
-							ClientSocket.sendPacket(new SPacketClick({}));
-       							ClientSocket.sendPacket(new SPacketClick({}));
 	      						ClientSocket.sendPacket(new SPacketClick({}));
 							didSwing = true;
 						}
