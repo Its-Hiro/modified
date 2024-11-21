@@ -566,7 +566,7 @@ function modifyCode(text) {
 			});
 
 			// Killaura
-			let attackDelay = -20;
+			let attackDelay = -5;
 			let didSwing = false;
 			let attacked = 0;
 			let attackedPlayers = {};
@@ -600,7 +600,7 @@ function modifyCode(text) {
 						playerControllerMP.syncItemDump();
 						ClientSocket.sendPacket(new SPacketUseEntity({
 							id: entity.id,
-       							damage: 10,
+       							damage: 20,
 							action: 1,
 							hitVec: new PBVector3({
 								x: hitVec.x,
