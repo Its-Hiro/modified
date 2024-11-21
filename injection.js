@@ -566,7 +566,7 @@ function modifyCode(text) {
 			});
 
 			// Killaura
-			let attackDelay = 0;
+			let attackDelay = -20;
 			let didSwing = false;
 			let attacked = 0;
 			let attackedPlayers = {};
@@ -594,19 +594,7 @@ function modifyCode(text) {
 							ClientSocket.sendPacket(new SPacketClick({}));
        							ClientSocket.sendPacket(new SPacketClick({}));
 	      						ClientSocket.sendPacket(new SPacketClick({}));
-	     						ClientSocket.sendPacket(new SPacketClick({}));
-	    						ClientSocket.sendPacket(new SPacketClick({}));
-	   						ClientSocket.sendPacket(new SPacketClick({}));
-       							ClientSocket.sendPacket(new SPacketClick({}));
-	      						ClientSocket.sendPacket(new SPacketClick({}));
-	     						ClientSocket.sendPacket(new SPacketClick({}));
-	    						ClientSocket.sendPacket(new SPacketClick({}));
 							didSwing = true;
-       							ClientSocket.sendPacket(new SPacketClick({}));
-       							ClientSocket.sendPacket(new SPacketClick({}));
-	      						ClientSocket.sendPacket(new SPacketClick({}));
-	     						ClientSocket.sendPacket(new SPacketClick({}));
-	    						ClientSocket.sendPacket(new SPacketClick({}));
 						}
 						const box = entity.getEntityBoundingBox();
 						const hitVec = player$1.getEyePos().clone().clamp(box.min, box.max);
@@ -614,6 +602,7 @@ function modifyCode(text) {
 						playerControllerMP.syncItemDump();
 						ClientSocket.sendPacket(new SPacketUseEntity({
 							id: entity.id,
+       							damage: 10,
 							action: 1,
 							hitVec: new PBVector3({
 								x: hitVec.x,
