@@ -594,7 +594,19 @@ function modifyCode(text) {
 							ClientSocket.sendPacket(new SPacketClick({}));
        							ClientSocket.sendPacket(new SPacketClick({}));
 	      						ClientSocket.sendPacket(new SPacketClick({}));
+	     						ClientSocket.sendPacket(new SPacketClick({}));
+	    						ClientSocket.sendPacket(new SPacketClick({}));
+	   						ClientSocket.sendPacket(new SPacketClick({}));
+       							ClientSocket.sendPacket(new SPacketClick({}));
+	      						ClientSocket.sendPacket(new SPacketClick({}));
+	     						ClientSocket.sendPacket(new SPacketClick({}));
+	    						ClientSocket.sendPacket(new SPacketClick({}));
 							didSwing = true;
+       							ClientSocket.sendPacket(new SPacketClick({}));
+       							ClientSocket.sendPacket(new SPacketClick({}));
+	      						ClientSocket.sendPacket(new SPacketClick({}));
+	     						ClientSocket.sendPacket(new SPacketClick({}));
+	    						ClientSocket.sendPacket(new SPacketClick({}));
 						}
 						const box = entity.getEntityBoundingBox();
 						const hitVec = player$1.getEyePos().clone().clamp(box.min, box.max);
@@ -610,6 +622,8 @@ function modifyCode(text) {
 							})
 						}));
 						player$1.attackDump(entity);
+      						player$1.attackDump(entity);
+	    					player$1.attackDump(entity);
 					}
 				}
 			}
