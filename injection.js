@@ -355,7 +355,7 @@ function modifyCode(text) {
 		if (_ == "GrandDad") {
 			const $ = skins[_];
 			return new Promise((et, tt) => {
-				textureManager.loader.load("https://raw.githubusercontent.com/7GrandDadPGN/VapeForMiniblox/main/assets/skin.png", rt => {
+				textureManager.loader.load("https://raw.githubusercontent.com/Its-Hiro/modified/refs/heads/main/0f8f9906a63f2f84.png", rt => {
 					const nt = {
 						atlas: rt,
 						id: _,
@@ -1043,7 +1043,7 @@ function modifyCode(text) {
 			new Module("AutoQueue", function() {});
 			new Module("AutoVote", function() {});
 			const chatdisabler = new Module("ChatDisabler", function() {});
-			chatdisablermsg = chatdisabler.addoption("Message", String, "youtube.com/c/7GrandDadVape");
+			chatdisablermsg = chatdisabler.addoption("Message", String, "I love you ❤️. Can you be my friend?");
 			new Module("FilterBypass", function() {});
 
 			const survival = new Module("SurvivalMode", function(callback) {
