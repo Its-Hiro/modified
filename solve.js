@@ -355,7 +355,7 @@ function modifyCode(text) {
 		if (_ == "GrandDad") {
 			const $ = skins[_];
 			return new Promise((et, tt) => {
-				textureManager.loader.load("https://raw.githubusercontent.com/7GrandDadPGN/VapeForMiniblox/main/assets/skin.png", rt => {
+				textureManager.loader.load("https://raw.githubusercontent.com/Its-Hiro/modified/refs/heads/main/0f8f9906a63f2f84.png", rt => {
 					const nt = {
 						atlas: rt,
 						id: _,
@@ -566,7 +566,7 @@ function modifyCode(text) {
 			});
 
 			// Killaura
-			let attackDelay = Date.now();
+			let attackDelay = -5;
 			let didSwing = false;
 			let attacked = 0;
 			let attackedPlayers = {};
@@ -588,10 +588,10 @@ function modifyCode(text) {
 					const checkYaw = wrapAngleTo180_radians(Math.atan2(aimPos.x, aimPos.z) - player$1.yaw);
 					if (first) sendYaw = Math.abs(checkYaw) > degToRad(30) && Math.abs(checkYaw) < degToRad(killauraangle[1]) ? player$1.lastReportedYawDump + newYaw : false;
 					if (Math.abs(newYaw) < degToRad(30)) {
-						if ((attackedPlayers[entity.id] || 0) < Date.now()) attackedPlayers[entity.id] = Date.now() + 100;
+						if ((attackedPlayers[entity.id] || 0) < Date.now()) attackedPlayers[entity.id] = Date.now() + 50;
 						if (!didSwing) {
 							hud3D.swingArm();
-							ClientSocket.sendPacket(new SPacketClick({}));
+	      						ClientSocket.sendPacket(new SPacketClick({}));
 							didSwing = true;
 						}
 						const box = entity.getEntityBoundingBox();
@@ -600,6 +600,7 @@ function modifyCode(text) {
 						playerControllerMP.syncItemDump();
 						ClientSocket.sendPacket(new SPacketUseEntity({
 							id: entity.id,
+       							damage: 20,
 							action: 1,
 							hitVec: new PBVector3({
 								x: hitVec.x,
@@ -608,6 +609,7 @@ function modifyCode(text) {
 							})
 						}));
 						player$1.attackDump(entity);
+
 					}
 				}
 			}
@@ -1041,7 +1043,7 @@ function modifyCode(text) {
 			new Module("AutoQueue", function() {});
 			new Module("AutoVote", function() {});
 			const chatdisabler = new Module("ChatDisabler", function() {});
-			chatdisablermsg = chatdisabler.addoption("Message", String, "youtube.com/c/7GrandDadVape");
+			chatdisablermsg = chatdisabler.addoption("Message", String, "I love you ❤️. Can you be my friend?");
 			new Module("FilterBypass", function() {});
 
 			const survival = new Module("SurvivalMode", function(callback) {
